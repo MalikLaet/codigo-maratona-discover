@@ -153,22 +153,6 @@ const Utils = {
     }
 }
 
-const App = {
-    init(){
-        Transaction.all.forEach(DOM.addTransaction)
-        
-        DOM.updateBalance()
-
-        Storage.set(Transaction.all)
-    },
-    reload (){
-        DOM.clearTransactions()
-        App.init()
-    },
-    
-}
-App.init()
-
 const Form ={
     description: document.querySelector('input#description'),
     amount: document.querySelector('input#amount'),
@@ -230,3 +214,20 @@ clearFields(){
     }
 
 }
+
+const App = {
+    init(){
+        Transaction.all.forEach(DOM.addTransaction)
+        
+        DOM.updateBalance()
+
+        Storage.set(Transaction.all)
+    },
+    reload (){
+        DOM.clearTransactions()
+        App.init()
+    },
+    
+}
+App.init()
+
