@@ -27,7 +27,7 @@ const Storage = {
     set(transactions){
         localStorage.setItem("dev.finances: transactions", JSON.stringify
         (transactions))
-    }
+    },
 }
 
 const Transaction = {
@@ -178,7 +178,7 @@ const Form ={
         return{
             description: Form.description.value,
             amount: Form.amount.value,
-            date: Form.date.value
+            date: Form.date.value,
         }
     },
 
@@ -203,7 +203,7 @@ const Form ={
         return {
             description,
             amount,
-            date
+            date,
         }
     },
 
